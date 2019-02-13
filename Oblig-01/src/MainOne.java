@@ -1,6 +1,6 @@
 import twostack.TwostackArray;
 
-public class Main {
+public class MainOne {
 
     private static boolean operand = false;
     private static boolean operator = true;
