@@ -57,7 +57,6 @@ public class MainOne {
 
 
     private static String infixToPrefix(String infix) {
-
         String trimmedInfix = infix.replaceAll("\\s+", "").trim();
 
         for (int i = 0; i < trimmedInfix.length(); i++) {
