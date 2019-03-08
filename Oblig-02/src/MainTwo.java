@@ -1,18 +1,21 @@
-import java.awt.*;
+public class MainTwo {
 
-public class MainTwo extends Frame {
+    private static void init() {
+        Friend friendOne = new Friend("Ted", "Bundy", "91997211", "Florida State Prison");
+        Friend friendTwo = new Friend("Per", "Orderud", "92621142", "Orderud Gård");
+        Friend friendThree = new Friend("Veronica", "Orderud", "91725311", "Orderud Gård");
 
-    private MainTwo () {
-        Frame f=new Frame();
-        Button b=new Button("click me");
-        b.setBounds(30,50,80,30);
-        f.add(b);
-        f.setSize(300,300);
-        f.setLayout(null);
-        f.setVisible(true);
+        FriendList list = new FriendList();
+
+        list.addFirst(friendOne);
+        list.addFirst(friendThree);
+        list.addFirst(friendTwo);
+
+        list.printList();
+
     }
 
     public static void main(String[] args) {
-        MainTwo f = new MainTwo();
+        init();
     }
 }
