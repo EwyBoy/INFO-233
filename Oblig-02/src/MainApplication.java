@@ -4,7 +4,24 @@ import node.FriendNode;
 
 import java.util.Scanner;
 
-public class MainTwo {
+public class MainApplication {
+
+    /*
+     *   Sources: [
+     *      https://www.geeksforgeeks.org/linked-list-set-2-inserting-a-node/
+     *      https://www.geeksforgeeks.org/linked-list-set-3-deleting-node/
+     *      https://www.geeksforgeeks.org/delete-a-linked-list-node-at-a-given-position/
+     *      https://www.geeksforgeeks.org/linked-list-set-3-deleting-node/
+     *      https://www.geeksforgeeks.org/find-length-of-a-linked-list-iterative-and-recursive/
+     *      https://www.geeksforgeeks.org/programmers-approach-looking-array-vs-linked-list/
+     *      https://www.geeksforgeeks.org/search-an-element-in-a-linked-list-iterative-and-recursive/
+     *      https://www.geeksforgeeks.org/remove-last-node-of-the-linked-list/
+     *  ];
+     *
+     *  Here is a link to MY GitHub in case someone is looking at my src and not referencing me in their sources:
+     *  https://github.com/EwyBoy/INFO-233
+     *
+     */
 
     private static FriendList friendList = new FriendList();
 
@@ -87,7 +104,7 @@ public class MainTwo {
 
         if (friend != null) {
             friendList.deleteFriend(friend);
-            System.out.println("friend.Friend: " + friend.firstName + " " + friend.lastName + " was removed from your friend list.");
+            System.out.println("Friend: " + friend.firstName + " " + friend.lastName + " was removed from your friend list.");
         } else {
             System.out.println("Could not find any friend with that name.");
         }

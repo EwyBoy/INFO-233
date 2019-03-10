@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e90ac4e-5bc0-4cf0-81ca-e568a9f8e6b3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/EivindNorling.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/EivindNorling.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Oblig-02/src/Friend.java" beforeDir="false" afterPath="$PROJECT_DIR$/Oblig-02/src/friend/Friend.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Oblig-02/src/FriendList.java" beforeDir="false" afterPath="$PROJECT_DIR$/Oblig-02/src/node/FriendList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Oblig-02/src/FriendNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/Oblig-02/src/node/FriendNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Oblig-02/src/IFriendList.java" beforeDir="false" afterPath="$PROJECT_DIR$/Oblig-02/src/node/IFriendList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Oblig-02/src/MainTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Oblig-02/src/MainTwo.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Oblig-02/src/MainTwo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="587">
-              <caret line="90" column="16" lean-forward="true" selection-start-line="90" selection-start-column="16" selection-end-line="90" selection-end-column="16" />
+            <state relative-caret-position="161">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -91,15 +85,16 @@
         <option value="$PROJECT_DIR$/Oblig-02/src/FriendNode.java" />
         <option value="$PROJECT_DIR$/Oblig-02/src/Friend.java" />
         <option value="$PROJECT_DIR$/Oblig-02/src/FriendList.java" />
-        <option value="$PROJECT_DIR$/Oblig-02/src/MainTwo.java" />
         <option value="$PROJECT_DIR$/Oblig-02/src/node/IFriendList.java" />
         <option value="$PROJECT_DIR$/Oblig-02/src/node/FriendList.java" />
+        <option value="$PROJECT_DIR$/Oblig-02/src/MainTwo.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
+    <option name="x" value="428" />
+    <option name="y" value="24" />
+    <option name="width" value="1012" />
     <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -178,7 +173,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552219238494" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552230709422" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -220,7 +215,7 @@
       </method>
     </configuration>
     <configuration name="Oblig 02" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="MainTwo" />
+      <option name="MAIN_CLASS_NAME" value="MainApplication" />
       <module name="Oblig-02" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <method v="2">
@@ -275,18 +270,18 @@
       <workItem from="1551982143513" duration="597000" />
       <workItem from="1551982799433" duration="5941000" />
       <workItem from="1552162360487" duration="11120000" />
-      <workItem from="1552219472839" duration="508000" />
+      <workItem from="1552219472839" duration="1804000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18166000" />
+    <option name="totallyTimeSpent" value="19462000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
+    <frame x="0" y="24" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20386267" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20386267" />
       <window_info id="Structure" order="1" weight="0.24964234" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -295,7 +290,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32899868" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.236671" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.236671" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.29518855" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -376,8 +371,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Oblig-02/src/MainTwo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="587">
-          <caret line="90" column="16" lean-forward="true" selection-start-line="90" selection-start-column="16" selection-end-line="90" selection-end-column="16" />
+        <state relative-caret-position="161">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
