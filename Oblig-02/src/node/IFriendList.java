@@ -1,3 +1,5 @@
+package node;
+
 import friend.Friend;
 
 public interface IFriendList {
@@ -9,5 +11,7 @@ public interface IFriendList {
     void addAfter(FriendNode node, Friend friend);
 
     void deleteFriend(Friend friend);
+
+    void sort(FriendList list);
 
 }

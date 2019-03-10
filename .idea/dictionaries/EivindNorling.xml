@@ -2,7 +2,11 @@
   <dictionary name="EivindNorling">
     <words>
       <w>bundy</w>
+      <w>firstname</w>
+      <w>fistname</w>
       <w>gård</w>
+      <w>kirkemo</w>
+      <w>lastname</w>
       <w>orderud</w>
     </words>
   </dictionary>

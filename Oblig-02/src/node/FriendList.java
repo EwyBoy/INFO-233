@@ -1,3 +1,5 @@
+package node;
+
 import friend.Friend;
 
 public class FriendList implements IFriendList {
@@ -80,6 +82,11 @@ public class FriendList implements IFriendList {
         if (temp == null) return;
 
         prev.next = temp.next;
+    }
+
+    @Override
+    public void sort(FriendList list) {
+        
     }
 
 }

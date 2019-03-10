@@ -1,3 +1,5 @@
+package node;
+
 import friend.Friend;
 
 public class FriendNode {

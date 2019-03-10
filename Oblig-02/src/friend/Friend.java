@@ -1,3 +1,5 @@
+package friend;
+
 public class Friend {
 
     public String firstName;
