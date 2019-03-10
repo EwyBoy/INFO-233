@@ -1,3 +1,5 @@
+import friend.Friend;
+
 public interface IFriendList {
 
     void addFirst(Friend newFriend);

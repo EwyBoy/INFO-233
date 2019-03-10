@@ -1,13 +1,26 @@
+import friend.Friend;
+
 public class FriendList implements IFriendList {
 
-    private FriendNode head;
+    public FriendNode head;
 
     public void printList() {
         FriendNode topNode = head;
         while (topNode != null) {
-            System.out.print(topNode.friend + " ");
+            System.out.print(topNode.friend.firstName  + " " + topNode.friend.lastName + "\t-\t");
             topNode = topNode.next;
         }
+        System.out.println();
+    }
+
+    public int getFriendCount() {
+        FriendNode temp = head;
+        int count = 0;
+        while (temp != null) {
+            count++;
+            temp = temp.next;
+        }
+        return count;
     }
 
     @Override

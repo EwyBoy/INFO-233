@@ -1,3 +1,5 @@
+import friend.Friend;
+
 public class FriendNode {
 
     public Friend friend;
