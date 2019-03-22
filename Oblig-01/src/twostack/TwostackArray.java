@@ -108,6 +108,7 @@ public class TwostackArray<E> implements Twostack<E> {
             rightArraySize--;
 
         }
+
         if (leftArraySize == 0) {
 
             leftArraySize++;

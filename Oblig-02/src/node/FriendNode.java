@@ -12,4 +12,8 @@ public class FriendNode {
         this.next = null;
     }
 
+    @Override
+    public String toString() {
+        return "Firstname: " + friend.firstName + " - Lastname: " + friend.lastName + " - Address: " + friend.address + " - Phone: " + friend.phoneNumber;
+    }
 }

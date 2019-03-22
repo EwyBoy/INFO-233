@@ -2,6 +2,7 @@ import friend.Friend;
 import node.FriendList;
 import node.FriendNode;
 
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class MainApplication {
@@ -27,9 +28,9 @@ public class MainApplication {
 
     /*  Initializes test data for application */
     private static void init() {
-        Friend friendOne = new Friend("Ted", "Bundy", "91997211", "Florida State Prison");
+        Friend friendOne = new Friend("Ted", "Bundy", "95997211", "Florida State Prison");
         Friend friendTwo = new Friend("Per", "Orderud", "92621142", "Orderud Gård");
-        Friend friendThree = new Friend("Veronica", "Orderud", "91725311", "Orderud Gård");
+        Friend friendThree = new Friend("Veronica", "Orderud", "71725311", "Orderud Gård");
         Friend friendFour = new Friend("Kristin", "Kirkemo", "91723322", "Oslo");
 
         friendList.addFirst(friendOne);
@@ -72,7 +73,7 @@ public class MainApplication {
         Friend friend = new Friend(firstName, lastName, phone, address);
 
         friendList.addFirst(friend);
-        System.out.println("friend.Friend: " + firstName + " " + lastName + " was added to your friend list.");
+        System.out.println("Friend: " + firstName + " " + lastName + " was added to your friend list.");
 
         runApplication(scanner);
     }
@@ -112,16 +113,41 @@ public class MainApplication {
         runApplication(scanner);
     }
 
+    private static void runIterator() {
+        Iterator iterator = friendList.iterator();
+
+        while (iterator.hasNext()) {
+            System.out.println("Has next: " + iterator.hasNext());
+            System.out.println(iterator.next());
+
+            if (!iterator.hasNext()) {
+                System.out.println("Has next: " + iterator.hasNext() + "\n");
+                System.out.println("Iteration done.\n");
+                break;
+            }
+        }
+    }
+
     /* A helper method to avoid reused code */
     private static String inputStringHelper(Scanner scanner, String field) {
-        System.out.println("Type in your new friends " + field + ": ");
+        System.out.println("Type in your new friend's " + field + ": ");
         return scanner.nextLine();
     }
 
     /* Main - Starts the application and initializes the input scanner */
     public static void main(String[] args) {
         init();
-        Scanner scanner = new Scanner(System.in);
-        runApplication(scanner);
+        runIterator();
+
+        friendList.printList();
+        friendList.sort(friendList);
+        friendList.printList();
+        friendList.printList();
+        friendList.printList();
+        friendList.printList();
+        friendList.printList();
+
+        //Scanner scanner = new Scanner(System.in);
+        //runApplication(scanner);
     }
 }

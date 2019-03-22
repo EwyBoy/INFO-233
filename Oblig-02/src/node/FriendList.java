@@ -1,18 +1,23 @@
 package node;
 
 import friend.Friend;
+import java.util.Iterator;
 
-public class FriendList implements IFriendList {
 
-    public FriendNode head;
+public class FriendList implements IFriendList, Iterable {
+
+    public static FriendNode head;
 
     public void printList() {
         FriendNode topNode = head;
+
+        System.out.println("You have " + getFriendCount() + " friends in your friend list!");
+        System.out.print("Friend List: ");
         while (topNode != null) {
             System.out.print(topNode.friend.firstName  + " " + topNode.friend.lastName + "\t-\t");
             topNode = topNode.next;
         }
-        System.out.println();
+        System.out.println("\n");
     }
 
     public int getFriendCount() {
@@ -23,6 +28,12 @@ public class FriendList implements IFriendList {
             temp = temp.next;
         }
         return count;
+    }
+
+
+    @Override
+    public Iterator iterator() {
+        return new FriendListIterator();
     }
 
     @Override
@@ -84,9 +95,24 @@ public class FriendList implements IFriendList {
         prev.next = temp.next;
     }
 
-    @Override
-    public void sort(FriendList list) {
-        
+
+    public void alphaSort(String a, String b) {
+        int compare = a.compareTo(b);
     }
 
+
+    @Override
+    public void sort(FriendList list) {
+        FriendNode topNode = head;
+
+        for (int i = 0; i < getFriendCount(); i++) {
+            while (topNode != null) {
+                if (topNode.next != null) {
+                    alphaSort(topNode.friend.lastName, topNode.next.friend.toString());
+                    topNode = topNode.next;
+                }
+            }
+            topNode = head;
+        }
+    }
 }
