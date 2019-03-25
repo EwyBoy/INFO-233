@@ -48,13 +48,15 @@ public class MainApplication {
         friendList.addFirst(friend4);
     }
 
-    /*  Runs the main hub code for the main.friend list application */
+    /*  Runs the main hub code for the friend list application */
     private static void runApplication(Scanner scanner) {
+
+        System.out.println(">>---------------------------------------------------------<<");
 
         friendList.printList(FriendList.head);
 
-        System.out.println("Type 'add' to add a new main.friend or 'remove' to remove a existing main.friend: ");
-        System.out.println("You can also type 'sort' to sort the main.friend list alphabetically by last names");
+        System.out.println("Type 'add' to add a new friend or 'remove' to remove a existing friend: ");
+        System.out.println("You can also type 'sort' to sort the friend list alphabetically by last names");
 
         String option = scanner.nextLine().toLowerCase();
 
@@ -77,7 +79,7 @@ public class MainApplication {
         }
     }
 
-    /* Runs the code needed to add a new main.friend object and adds that main.friend to the main.friend list */
+    /* Runs the code needed to add a new friend object and adds that friend to the friend list */
     private static void addFriend(Scanner scanner) {
         String firstName = inputStringHelper(scanner, "first name");
         String lastName = inputStringHelper(scanner, "last name");
@@ -87,14 +89,14 @@ public class MainApplication {
         Friend friend = new Friend(firstName, lastName, phone, address);
 
         friendList.addFirst(friend);
-        System.out.println("Friend: " + firstName + " " + lastName + " was added to your main.friend list.");
+        System.out.println("Friend: " + firstName + " " + lastName + " was added to your friend list.");
 
         runApplication(scanner);
     }
 
-    /* Runs the code needed to remove a main.friend object from the main.friend list */
+    /* Runs the code needed to remove a friend object from the friend list */
     private static void removeFriend(Scanner scanner) {
-        System.out.println("Type in the full name [firstname lastname] of the main.friend you wish to remove: ");
+        System.out.println("Type in the full name [firstname lastname] of the friend you wish to remove: ");
         String name = scanner.nextLine().toLowerCase();
 
         String[] names = name.split(" ");
@@ -119,13 +121,14 @@ public class MainApplication {
 
         if (friend != null) {
             friendList.deleteFriend(friend);
-            System.out.println("Friend: " + friend.firstName + " " + friend.lastName + " was removed from your main.friend list.");
+            System.out.println("Friend: " + friend.firstName + " " + friend.lastName + " was removed from your friend list.");
         } else {
-            System.out.println("Could not find any main.friend with that name.");
+            System.out.println("Could not find any friend with that name.");
         }
 
         runApplication(scanner);
     }
+
 
     private static void sortList(Scanner scanner) {
         friendList.printList(FriendList.head);
@@ -136,10 +139,16 @@ public class MainApplication {
         runApplication(scanner);
     }
 
+    public static void simplifedForLoop() {
+        for(Object friend : friendList){
+            System.out.println(friend.toString());
+        }
+    }
+
     private static void runIterator() {
         Iterator iterator = friendList.iterator();
 
-        System.out.println("Demoing iterator, sit back and enjoy.");
+        System.out.println("Demoing iterator, sit back and enjoy.\n");
 
         while (iterator.hasNext()) {
             System.out.println("Has next: " + iterator.hasNext());
@@ -155,7 +164,7 @@ public class MainApplication {
 
     /* A helper method to avoid reused code */
     private static String inputStringHelper(Scanner scanner, String field) {
-        System.out.println("Type in your new main.friend's " + field + ": ");
+        System.out.println("Type in your new friend's " + field + ": ");
         return scanner.nextLine();
     }
 

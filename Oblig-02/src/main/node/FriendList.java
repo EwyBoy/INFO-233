@@ -11,7 +11,7 @@ public class FriendList implements IFriendList, Iterable {
     public void printList(FriendNode head) {
         FriendNode topNode = head;
 
-        System.out.println("You have " + getFriendCount() + " friends in your main.friend list!");
+        System.out.println("You have " + getFriendCount() + " friends in your friend list!");
         System.out.print("Friend List: ");
 
         while (topNode != null) {
@@ -22,7 +22,7 @@ public class FriendList implements IFriendList, Iterable {
         System.out.println("\n");
     }
 
-    private int getFriendCount() {
+    public int getFriendCount() {
         FriendNode temp = head;
         int count = 0;
         while (temp != null) {
@@ -69,7 +69,7 @@ public class FriendList implements IFriendList, Iterable {
     @Override
     public void addAfter(FriendNode lastFriend, Friend friend) {
         if (lastFriend == null) {
-            System.out.println("Last main.node can't be null");
+            System.out.println("Last node can't be null");
             return;
         }
 
@@ -132,6 +132,7 @@ public class FriendList implements IFriendList, Iterable {
         if (sorted == null || sorted.friend.lastName.compareTo(node.friend.lastName) >= 0) {
             node.next = sorted;
             sorted = node;
+
         } else {
 
             FriendNode current = sorted;
