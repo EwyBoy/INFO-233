@@ -1,26 +1,28 @@
-package node;
+package main.node;
 
-import friend.Friend;
+import main.friend.Friend;
+
 import java.util.Iterator;
-
 
 public class FriendList implements IFriendList, Iterable {
 
     public static FriendNode head;
 
-    public void printList() {
+    public void printList(FriendNode head) {
         FriendNode topNode = head;
 
-        System.out.println("You have " + getFriendCount() + " friends in your friend list!");
+        System.out.println("You have " + getFriendCount() + " friends in your main.friend list!");
         System.out.print("Friend List: ");
+
         while (topNode != null) {
-            System.out.print(topNode.friend.firstName  + " " + topNode.friend.lastName + "\t-\t");
+            System.out.print(topNode.friend.firstName  + " " + topNode.friend.lastName + " - ");
             topNode = topNode.next;
         }
+
         System.out.println("\n");
     }
 
-    public int getFriendCount() {
+    private int getFriendCount() {
         FriendNode temp = head;
         int count = 0;
         while (temp != null) {
@@ -35,6 +37,7 @@ public class FriendList implements IFriendList, Iterable {
     public Iterator iterator() {
         return new FriendListIterator();
     }
+
 
     @Override
     public void addFirst(Friend newFriend) {
@@ -66,7 +69,7 @@ public class FriendList implements IFriendList, Iterable {
     @Override
     public void addAfter(FriendNode lastFriend, Friend friend) {
         if (lastFriend == null) {
-            System.out.println("Last node can't be null");
+            System.out.println("Last main.node can't be null");
             return;
         }
 
@@ -96,23 +99,50 @@ public class FriendList implements IFriendList, Iterable {
     }
 
 
-    public void alphaSort(String a, String b) {
-        int compare = a.compareTo(b);
-    }
+    /*
+        I chose to go with a insertion sorting algorithm because it was well documented
+        and it was easier to keep track of all the nodes while working with this one.
+        I first tried to get a merge-sorting algorithm to work but I ran into a lot of
+        different issues with that one. So I chose this one for convenience sake.
 
+        Runtime Analysis:
+        My implementation of the insertion sort algorithm ends up at a O(n^2)
+        because of the two while loops, where the second loop inside insertionSort()
+        runs inside of the first while from sort().
+     */
+
+    private FriendNode sorted;
 
     @Override
-    public void sort(FriendList list) {
-        FriendNode topNode = head;
+    public void sort(FriendNode head) {
+        sorted = null;
+        FriendNode current = head;
 
-        for (int i = 0; i < getFriendCount(); i++) {
-            while (topNode != null) {
-                if (topNode.next != null) {
-                    alphaSort(topNode.friend.lastName, topNode.next.friend.toString());
-                    topNode = topNode.next;
-                }
+        while (current != null) {
+            FriendNode next = current.next;
+            insertionSort(current);
+
+            current = next;
+        }
+
+        FriendList.head = sorted;
+    }
+
+    private void insertionSort(FriendNode node) {
+        if (sorted == null || sorted.friend.lastName.compareTo(node.friend.lastName) >= 0) {
+            node.next = sorted;
+            sorted = node;
+        } else {
+
+            FriendNode current = sorted;
+
+            while (current.next != null && current.next.friend.lastName.compareTo(node.friend.lastName) < 0) {
+                current = current.next;
             }
-            topNode = head;
+
+            node.next = current.next;
+            current.next = node;
         }
     }
+
 }

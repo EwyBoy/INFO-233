@@ -1,4 +1,4 @@
-package friend;
+package main.friend;
 
 public class Friend {
 

@@ -1,6 +1,6 @@
-package node;
+package main.node;
 
-import friend.Friend;
+import main.friend.Friend;
 
 public class FriendNode {
 

@@ -1,6 +1,6 @@
-package node;
+package main.node;
 
-import friend.Friend;
+import main.friend.Friend;
 
 public interface IFriendList {
 
@@ -12,6 +12,6 @@ public interface IFriendList {
 
     void deleteFriend(Friend friend);
 
-    void sort(FriendList list);
+    void sort(FriendNode head);
 
 }
