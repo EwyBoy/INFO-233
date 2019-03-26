@@ -106,9 +106,9 @@ public class FriendList implements IFriendList, Iterable {
         different issues with that one. So I chose this one for convenience sake.
 
         Runtime Analysis:
-        My implementation of the insertion sort algorithm ends up at a O(n^2)
-        because of the two while loops, where the second loop inside insertionSort()
-        runs inside of the first while from sort().
+        My implementation of the insertion sort algorithm ends up at a O(n^2) when
+        the seconds while loop is triggered inside insertionSort(), there could be
+        situations where it only runs the first while loop and could be a O(n).
      */
 
     private FriendNode sorted;

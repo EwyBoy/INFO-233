@@ -139,7 +139,8 @@ public class MainApplication {
         runApplication(scanner);
     }
 
-    public static void simplifedForLoop() {
+    // Here is the simplified for loop
+    public static void simplifiedForLoop() {
         for(Object friend : friendList){
             System.out.println(friend.toString());
         }
@@ -156,7 +157,7 @@ public class MainApplication {
 
             if (!iterator.hasNext()) {
                 System.out.println("Has next: " + iterator.hasNext() + "\n");
-                System.out.println("Iteration done.\n");
+                System.out.println("Iteration demo done.\n");
                 break;
             }
         }
