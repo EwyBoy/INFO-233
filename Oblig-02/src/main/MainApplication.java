@@ -22,7 +22,8 @@ public class MainApplication {
      *      https://www.geeksforgeeks.org/remove-last-node-of-the-linked-list/
      *  ];
      *
-     *  Usually sits next to David Kvasnes Olsen, our code could have similarities from shearing knowledge.
+     *  Usually sits next to David Kvasnes Olsen and Hallvard Moan Kristiansen,
+     *  our code could have similarities from shearing knowledge.
      *
      *  Here is a link to MY GitHub in case someone is looking at my src and not referencing me in their sources:
      *  https://github.com/EwyBoy/INFO-233
@@ -139,28 +140,15 @@ public class MainApplication {
         runApplication(scanner);
     }
 
-    // Here is the simplified for loop
-    public static void simplifiedForLoop() {
+
+    private static void runIterator() {
+        System.out.println("Demoing iterator, sit back and enjoy.\n");
+
         for(Object friend : friendList){
             System.out.println(friend.toString());
         }
-    }
 
-    private static void runIterator() {
-        Iterator iterator = friendList.iterator();
-
-        System.out.println("Demoing iterator, sit back and enjoy.\n");
-
-        while (iterator.hasNext()) {
-            System.out.println("Has next: " + iterator.hasNext());
-            System.out.println(iterator.next());
-
-            if (!iterator.hasNext()) {
-                System.out.println("Has next: " + iterator.hasNext() + "\n");
-                System.out.println("Iteration demo done.\n");
-                break;
-            }
-        }
+        System.out.println("Iteration demo done.\n");
     }
 
     /* A helper method to avoid reused code */

@@ -8,17 +8,17 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class FriendListTest {
 
-    FriendList friendList = new FriendList();
+    private FriendList friendList = new FriendList();
 
-    Friend friend1 = new Friend("Berit", "Bertnsen", "95123901", "Postveien 1");
-    Friend friend2 = new Friend("Carl", "Carlsen", "95123902", "Postveien 2");
-    Friend friend3 = new Friend("Dora", "Danielsen", "95123903", "Postveien 3");
-    Friend friend4 = new Friend("Erik", "Erickson", "95123904", "Postveien 4");
-    Friend friend5 = new Friend("", "", "", "");
+    private Friend friend1 = new Friend("Berit", "Bertnsen", "95123901", "Postveien 1");
+    private Friend friend2 = new Friend("Carl", "Carlsen", "95123902", "Postveien 2");
+    private Friend friend3 = new Friend("Dora", "Danielsen", "95123903", "Postveien 3");
+    private Friend friend4 = new Friend("Erik", "Erickson", "95123904", "Postveien 4");
+    private Friend friend5 = new Friend("", "", "", "");
 
     @Test
     void addFirst() {
-        // Checks if frindList is empty
+        // Checks if friendList is empty
         assertEquals(0, friendList.getFriendCount());
 
         // Initializing two test friends and checks the friend count is equal to 2
@@ -72,7 +72,7 @@ class FriendListTest {
         friendList.deleteFriend(friend4);
         friendList.deleteFriend(friend2);
 
-        // Checks if frindList is empty
+        // Checks if friendList is empty
         assertEquals(0, friendList.getFriendCount());
 
         // Tires to delete a friend that is already deleted
